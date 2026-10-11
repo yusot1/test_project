@@ -26,6 +26,11 @@ def hello(name: str = "студент"):
     return {"message": f"Привет, {name}!"}
 
 
+@app.get("/version")
+def version():
+    return {"version":"0.1.0"}
+
+
 @app.get("/info")
 def info():
     app_name = os.getenv("APP_NAME", "Учебный сервис")
